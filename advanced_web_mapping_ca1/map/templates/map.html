@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Map{% endblock %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+{% endblock %}
+
+{% block content %}
+    <h3 class="mb-4">Map</h3>
+    <div id="map"></div>
+    <button id="update-location-btn" class="btn btn-primary rounded-pill px-4 py-2 mt-3" onclick="updateLocation()">Update Location</button>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    // Initialize map with dark theme tile layer
+    var map = L.map('map').setView([53.0, -8.0], 6);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
+    }).addTo(map);
+
+    var marker;
+    var circle;
+
+    function updateMap(latitude, longitude, accuracy) {
+        if (marker) {
+            map.removeLayer(marker);
+        }
+        if (circle) {
+            map.removeLayer(circle);
+        }
+
+        marker = L.marker([latitude, longitude], {bounceOnAdd: true, bounceOnAddOptions: {duration: 500, height: 100}}).addTo(map);
+        circle = L.circle([latitude, longitude], accuracy).addTo(map);
+        map.setView([latitude, longitude], 12);
+    }
+
+    function updateLocation() {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+                var accuracy = position.coords.accuracy;
+                updateMap(latitude, longitude, accuracy);
+
+                // Send location to Django view
+                fetch('{% url "update_location" %}', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    body: 'latitude=' + latitude + '&longitude=' + longitude
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        console.log('Location updated successfully');
+                    } else {
+                        console.error('Error updating location');
+                    }
+                });
+            },
+            function(error) {
+                console.error('Error getting location:', error);
+            }
+        );
+    }
+
+    // If user has a saved location, display it on the map
+    {% if location %}
+        updateMap({{ location.y }}, {{ location.x }}, 100);  // Adjust accuracy as needed
+    {% endif %}
+</script>
+{% endblock %}
