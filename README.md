@@ -1,3 +1,8 @@
+# Code located in AWM_CA Branch
+Student Number: D18123630
+Student Name: Junhan Dang
+
+
 # Advanced Web Mapping Project (AWM_CA)
 
 This project is an advanced web mapping application that integrates Django, PostGIS, Leaflet.js, and Nginx. The primary purpose of this application is to provide a location-based service with map visualization, allowing users to interact with geospatial data.
