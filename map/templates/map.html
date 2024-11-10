@@ -10,9 +10,9 @@
 {% block content %}
     <h3 class="mb-4">Map</h3>
     <div id="map"></div>
-    <button id="update-location-btn" class="btn btn-primary rounded-pill px-4 py-2 mt-3" onclick="updateLocation()">显示我的位置</button>
-    <button id="show-markers-btn" class="btn btn-secondary rounded-pill px-4 py-2 mt-3" onclick="showMarkers()">显示已保存的标记</button>
-    <button id="show-landmarks-btn" class="btn btn-secondary rounded-pill px-4 py-2 mt-3" onclick="showLandmarks()">显示都柏林旅游景点</button>
+    <button id="update-location-btn" class="btn btn-primary rounded-pill px-4 py-2 mt-3" onclick="updateLocation()">Show My Location</button>
+    <button id="show-markers-btn" class="btn btn-secondary rounded-pill px-4 py-2 mt-3" onclick="showMarkers()">Display the saved Marks</button>
+    <button id="show-landmarks-btn" class="btn btn-secondary rounded-pill px-4 py-2 mt-3" onclick="showLandmarks()">Display the Landmarks</button>
     <div id="manual-marker" class="mt-3"></div>
 {% endblock %}
 
@@ -67,10 +67,10 @@
                 // cauculate the distance 
                 calculateDistances();  
             })
-            .catch(error => console.error('加载标记失败:', error));
+            .catch(error => console.error('Fail to load:', error));
     }
 
-    // 计算用户位置到标记的距离
+    // cauculate the distance
     function calculateDistances() {
         if (!currentLocation) return;
 
@@ -78,13 +78,13 @@
         mapMarkers.forEach(marker => {
             const latLng = marker.getLatLng();
             const distance = getDistanceFromLatLonInKm(currentLocation.latitude, currentLocation.longitude, latLng.lat, latLng.lng);
-            distancesOutput += `<li><b>${marker.getPopup().getContent()}</b>: 距离 ${distance.toFixed(2)} 公里</li>`;
+            distancesOutput += `<li><b>${marker.getPopup().getContent()}</b>: Distance ${distance.toFixed(2)} km</li>`;
         });
         distancesOutput += "</ul>";
         document.getElementById("manual-marker").innerHTML = distancesOutput;
     }
 
-    // 显示都柏林旅游景点
+    //landmarks
     function showLandmarks() {
         landmarkMarkers.forEach(marker => map.removeLayer(marker));
         landmarkMarkers = [];
