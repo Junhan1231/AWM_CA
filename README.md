@@ -1,4 +1,4 @@
-# Code located in AWM_CA Branch
+# Hi Dr Raufi Bujar My Code located in AWM_CA Branch
 Student Number: D18123630
 Student Name: Junhan Dang
 
@@ -27,6 +27,33 @@ This project is an advanced web mapping application that integrates Django, Post
 - Docker & Docker Compose
 - AWS account with a configured EC2 instance
 - [awmcaproject.info](http://awmcaproject.info/)
-- 
+
+
+
+## Function Screenshots
+
+### Login
+![Login Page](./CALogin.png)
+
+### Starting page 
+![Starting Page](./CAStartingPage.png)
+
+### User current location
+![Current Location](./CACurrentLocation.png)
+
+### Database for landmarks
+![Landmark Database](./CALandmarkDatabase.png)
+
+### Show the landmarks
+![Landmarks](./CALandMarks.png)
+
+### Trinity Saved marks
+![Trinity Landmark](./CALanMarksTrnitity.png)
+
+## Data Migration 
+![Data Migration](./Data%20migrate.png)
+
+## Docker container
+![Docker Containers](./Docker%20Container.png)
 
 
