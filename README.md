@@ -26,6 +26,7 @@ This project is an advanced web mapping application that integrates Django, Post
 
 - Docker & Docker Compose
 - AWS account with a configured EC2 instance
-- awmcaproject.info
+- [awmcaproject.info](http://awmcaproject.info/)
+- 
 
 
