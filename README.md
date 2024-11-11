@@ -33,27 +33,27 @@ This project is an advanced web mapping application that integrates Django, Post
 ## Function Screenshots
 
 ### Login
-![Login Page](./CALogin.png)
+![Login Page](./Screenshot/CALogin.png)
 
 ### Starting page 
-![Starting Page](./CAStartingPage.png)
+![Starting Page](./Screenshot/CAStartingPage.png)
 
 ### User current location
-![Current Location](./CACurrentLocation.png)
+![Current Location](./Screenshot/CACurrentLocation.png)
 
 ### Database for landmarks
-![Landmark Database](./CALandmarkDatabase.png)
+![Landmark Database](./Screenshot/CALandmarkDatabase.png)
 
 ### Show the landmarks
-![Landmarks](./CALandMarks.png)
+![Landmarks](./Screenshot/CALandMarks.png)
 
 ### Trinity Saved marks
-![Trinity Landmark](./CALanMarksTrnitity.png)
+![Trinity Landmark](./Screenshot/CALanMarksTrnitity.png)
 
 ## Data Migration 
-![Data Migration](./Data%20migrate.png)
+![Data Migration](./Screenshot/Data%20migrate.png)
 
 ## Docker container
-![Docker Containers](./Docker%20Container.png)
+![Docker Containers](./Screenshot/Docker%20Container.png)
 
 
