@@ -26,13 +26,6 @@ This project is an advanced web mapping application that integrates Django, Post
 
 - Docker & Docker Compose
 - AWS account with a configured EC2 instance
-- Domain name for application deployment
-
-## Setup and Deployment
-
-### Step 1: Configure AWS and Domain Name
-
-1. **AWS EC2 Setup**: Launch an EC2 instance and set up necessary security groups to allow traffic on ports 80 and 443.
-2. **Domain Setup**: Point your domain to the public IP of your EC2 instance (e.g., using GoDaddy or your domain registrar).
+- awmcaproject.info
 
 
