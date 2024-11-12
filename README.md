@@ -66,19 +66,10 @@ This project is an advanced web mapping application that integrates Django, Post
 
 
 ## Serer site Show user favor Location before
-![Docker Containers](./Screenshot/ServerPageSavedMark.png)
+![Docker Containers](./Screenshot/ServerPageSavedMarks.png)
 
 ## Serer site Dublin Landmarks
-![Docker Containers](./Screenshot/ServerPagelanMark.png)
+![Docker Containers](./Screenshot/ServerPageLanMark.png)
 
-
-
-## Serer site Docker Compose file 
-![Docker Containers](./Screenshot/ServerPageDocker.png)
-
-
-
-## Serer site Docker Compose file 
-![Docker Containers](./Screenshot/ServerPageDocker.png)
 
 
