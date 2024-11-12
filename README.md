@@ -59,7 +59,20 @@ This project is an advanced web mapping application that integrates Django, Post
 ## Data Migration 
 ![Data Migration](./Screenshot/Data%20migrate.png)
 
-## Docker container
-![Docker Containers](./Screenshot/Docker%20Container.png)
+
+
+## Server site Function Screenshots
+![Login Page](./Screenshot/CALogin.png)
+
+## Serer site Saved user favor Location
+![Docker Containers](./Screenshot/ServerPageMakeMark.png)
+
+## Serer site Docker Compose file 
+![Docker Containers](./Screenshot/ServerPageDocker.png)
+
+
+
+## Serer site Docker Compose file 
+![Docker Containers](./Screenshot/ServerPageDocker.png)
 
 
