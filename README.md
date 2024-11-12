@@ -62,7 +62,7 @@ This project is an advanced web mapping application that integrates Django, Post
 
 
 ## Server site Function Screenshots
-![Login Page](./Screenshot/CALogin.png)
+![Login Page](./Screenshot/ServerPageLogin.png)
 
 ## Serer site Saved user favor Location
 ![Docker Containers](./Screenshot/ServerPageMakeMark.png)
